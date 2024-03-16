@@ -10,4 +10,4 @@ WORKDIR /app
 
 COPY . .
 
-CMD python -m Adarsh
+CMD python -m biisal
