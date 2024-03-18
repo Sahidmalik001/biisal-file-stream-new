@@ -204,10 +204,7 @@ async def cb_handler(client, query):
 
 
     if data == "start":
-        await query.message.edit_text(
-        text = SRT_TXT.format(query.from_user.mention(style="md")),
-        reply_markup=InlineKeyboardMarkup(
-                [
+        btn = ([
             [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🤡", url="https://t.me/m_house786")],
             [
                  InlineKeyboardButton("ᴀʙᴏᴜᴛ 😎", callback_data="about"),
@@ -222,7 +219,8 @@ async def cb_handler(client, query):
         ]
             )
         )
-
+        await query.message.edit_text(
+        text = SRT_TXT.format(query.from_user.mention(style="md")), reply_markup=InlineKeyboardMarkup(btn), reply_markup=reply_markup,parse_mode=enums.ParseMode.HTML)
     
     elif data == "about":
         await query.message.edit_caption(
