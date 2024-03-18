@@ -213,7 +213,8 @@ async def cb_handler(client, query):
            ],[
            InlineKeyboardButton("ᴅᴇᴠ 😊", callback_data="aboutDev")
            ]] 
-        return await query.message.edit_text(text = SRT_TXT.format(query.from_user.mention, reply_markup=InlineKeyboardMarkup(btn)))
+        reply_markup=InlineKeyboardMarkup(btn)
+        return await query.message.edit_text(text = SRT_TXT.format(query.from_user.mention, reply_markup=reply_markup,parse_mode=enums.ParseMode.HTML))
     
     elif data == "about":
         await query.message.edit_caption(
