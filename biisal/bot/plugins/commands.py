@@ -65,7 +65,7 @@ async def start(b, m):
     await m.reply_text(
     #chat_id=m.chat.id,
     #photo="https://telegra.ph/file/d813fe75a3ac675ef34b7.jpg",
-    text= SRT_TXT.format(m.from_user.mention, disable_web_page_preview=True)),
+    text= SRT_TXT.format(m.from_user.mention, disable_web_page_preview=True),
     reply_markup=InlineKeyboardMarkup(
         [
             [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🤡", url="https://t.me/m_house786")],
@@ -80,7 +80,7 @@ async def start(b, m):
                  InlineKeyboardButton("ᴅᴇᴠ 😊", callback_data="aboutDev")
             ]
         ]
-    )
+    ) 
 )
 @StreamBot.on_message(filters.command("help") & filters.private )
 async def help_cd(b, m):
