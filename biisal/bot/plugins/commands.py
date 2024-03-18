@@ -62,10 +62,10 @@ async def start(b, m):
                 
                 disable_web_page_preview=True)
             return
-    await m.reply_text(
+    await m.reply_photo(
     #chat_id=m.chat.id,
-    #photo="https://telegra.ph/file/d813fe75a3ac675ef34b7.jpg",
-    text= SRT_TXT.format(m.from_user.mention), 
+    photo="https://telegra.ph/file/d813fe75a3ac675ef34b7.jpg",
+    caption= SRT_TXT.format(m.from_user.mention), 
     disable_web_page_preview=True,
     reply_markup=InlineKeyboardMarkup(
         [
@@ -214,7 +214,7 @@ async def cb_handler(client, query):
            ],[
            InlineKeyboardButton("ᴅᴇᴠ 😊", callback_data="aboutDev")
            ]] 
-        return await query.message.edit_text(text = SRT_TXT.format(query.from_user.mention, disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(btn)))
+        return await query.message.edit_text(text = SRT_TXT.format(query.from_user.mention, reply_markup=InlineKeyboardMarkup(btn)))
     
     elif data == "about":
         await query.message.edit_caption(
