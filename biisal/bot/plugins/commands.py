@@ -204,23 +204,18 @@ async def cb_handler(client, query):
 
 
     if data == "start":
-        btn = ([
-            [InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🤡", url="https://t.me/m_house786")],
-            [
-                 InlineKeyboardButton("ᴀʙᴏᴜᴛ 😎", callback_data="about"),
-                 InlineKeyboardButton("ʜᴇʟᴘ 😅", callback_data="help")
-            ],
-            [InlineKeyboardButton("ᴏᴜʀ ɢʀᴏᴜᴘ 🚩", url=bisal_grp)],
-
-            [
-                 InlineKeyboardButton("ᴅɪsᴄʟᴀɪᴍᴇʀ 🔻", url=f"https://telegra.ph/Disclaimer-11-07-37"),
-                 InlineKeyboardButton("ᴅᴇᴠ 😊", callback_data="aboutDev")
-            ]
-        ]
-        )
-        reply_markup=InlineKeyboardMarkup(btn),
-        await query.message.edit_text(
-        text = SRT_TXT.format(query.from_user.mention(style="md")), reply_markup=reply_markup,parse_mode=enums.ParseMode.HTML)
+        btn = [[InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ 🤡", url="https://t.me/m_house786"),
+           ],[
+           InlineKeyboardButton("ᴀʙᴏᴜᴛ 😎", callback_data="about"),
+           InlineKeyboardButton("ʜᴇʟᴘ 😅", callback_data="help")
+           ],[
+           InlineKeyboardButton("ᴏᴜʀ ɢʀᴏᴜᴘ 🚩", url=bisal_grp),
+           InlineKeyboardButton("ᴅɪsᴄʟᴀɪᴍᴇʀ 🔻", url=f"https://telegra.ph/Disclaimer-11-07-37"),
+           ],[
+           InlineKeyboardButton("ᴅᴇᴠ 😊", callback_data="aboutDev")
+           ]] 
+        reply_markup=InlineKeyboardMarkup(btn)
+        return await query.message.edit_text(text = SRT_TXT.format(query.from_user.mention), reply_markup=reply_markup,parse_mode=enums.ParseMode.HTML)
     
     elif data == "about":
         await query.message.edit_caption(
