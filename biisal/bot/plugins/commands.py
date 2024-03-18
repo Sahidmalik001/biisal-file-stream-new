@@ -15,7 +15,6 @@ db = Database(Var.DATABASE_URL, Var.name)
 from pyrogram.types import ReplyKeyboardMarkup
 from biisal.vars import bot_name , bisal_channel , bisal_grp
 btns = InlineKeyboardButton
-hide = disable_web_page_preview=True
 btns2 = InlineKeyboardMarkup
 
 SRT_TXT = """<b>Hey {}!,
@@ -224,7 +223,7 @@ async def cb_handler(client, query):
             btns("ʜᴏᴍᴇ", callback_data="start"),
             btns("ᴄʟᴏsᴇ ‼️", callback_data="close_data")
         ]]
-        await query.message.edit_text(text=f"<b>Mʏ ɴᴀᴍᴇ :<a href='https://t.me/filetolink65bot'>{bot_name}</a>\nAᴅᴍɪɴ : <a href='https://t.me/sahid_malik'>Sahid malik</a>\nʜᴏsᴛᴇᴅ ᴏɴ : ʜᴇʀᴏᴋᴜ\nᴅᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\nʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3</b>", hide=hide, reply_markup=btns2(btn))
+        await query.message.edit_text(text=f"<b>Mʏ ɴᴀᴍᴇ :<a href='https://t.me/filetolink65bot'>{bot_name}</a>\nAᴅᴍɪɴ : <a href='https://t.me/sahid_malik'>Sahid malik</a>\nʜᴏsᴛᴇᴅ ᴏɴ : ʜᴇʀᴏᴋᴜ\nᴅᴀᴛᴀʙᴀsᴇ : ᴍᴏɴɢᴏ ᴅʙ\nʟᴀɴɢᴜᴀɢᴇ : ᴘʏᴛʜᴏɴ 3</b>", disable_web_page_preview=True, reply_markup=btns2(btn))
     elif data == "help":
         await query.message.edit_text(
         text=f"<b>ᴡᴇ ᴅᴏɴᴛ ɴᴇᴇᴅ ᴍᴀɴʏ ᴄᴏᴍᴍᴀɴᴅs ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ 🤩.\n\nᴊᴜsᴛ sᴇɴᴅ ᴍᴇ ᴠɪᴅᴇᴏ ғɪʟᴇs ᴀɴᴅ ɪ ᴡɪʟʟ ɢɪᴠᴇ ʏᴏᴜ ᴅɪʀᴇᴄᴛ ᴅᴏᴡɴʟᴏᴀᴅ & sᴛʀᴇᴀᴍᴀʙʟᴇ</a> ʟɪɴᴋ.\n\nᴏʀ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴍᴇ ɪɴ <a href='https://t.me/m_admins'>ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ</a>..ᴊᴜsᴛ ᴀᴅᴅ ᴍᴇ ᴀɴᴅ ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ sᴇᴇ ᴍʏ ᴍᴀɢɪᴄ 😎</b>", 
